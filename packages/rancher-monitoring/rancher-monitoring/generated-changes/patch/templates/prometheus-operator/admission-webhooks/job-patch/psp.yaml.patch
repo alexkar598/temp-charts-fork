@@ -5,11 +5,9 @@
  {{- if and .Values.prometheusOperator.enabled .Values.prometheusOperator.admissionWebhooks.enabled .Values.prometheusOperator.admissionWebhooks.patch.enabled .Values.global.rbac.create .Values.global.rbac.pspEnabled (not .Values.prometheusOperator.admissionWebhooks.certManager.enabled) }}
  apiVersion: policy/v1beta1
  kind: PodSecurityPolicy
-@@ -44,4 +45,5 @@
-       - min: 0
+@@ -45,3 +46,4 @@
          max: 65535
    readOnlyRootFilesystem: false
--{{- end }}
-+{{- end }}
+ {{- end }}
 +{{- end }}
 \ No newline at end of file
